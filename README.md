@@ -6,8 +6,7 @@ If your headphones disconnect, run out of battery, or you walk out of range, Blu
 ##  Features
 * **Instant Logging:** Drops a GPS pin the exact second a Bluetooth device disconnects.
 * **Notifications:** Sends a quick alert to your phone so you realize you left your device behind before you get too far.
-* **100% Offline & Private:** Everything is saved locally on your phone using a Room database. There is no cloud sync, no accounts, and no weird tracking. 
-* **Simple UI:** A clean, dark-mode dashboard that shows your devices and gives you a 1-tap button to open their last known location in Google Maps.
+* **Offline:** Everything is saved locally on your phone using a Room database. There is no cloud sync and no accounts.
 * **Home Screen Widget:** A handy toggle widget so you can turn background tracking off when you're just hanging out at home.
 
 ##  How It Works
@@ -24,4 +23,4 @@ If your headphones disconnect, run out of battery, or you walk out of range, Blu
 * **Dependencies:** Jetpack Compose, Room SQLite, Google Play Services Location
 
 ##  A Note on Privacy
-Because the app needs to track where your headphones disconnect while your phone is asleep in your pocket, it requires the **Background Location** permission. However, the app doesn't even request internet permissions. Your location data never leaves your device.
+Because the app needs to track where your headphones disconnect while your phone is asleep in your pocket, it requires the **Background Location** permission. However, the app doesn't  request internet permissions. Your location data never leaves your device.
