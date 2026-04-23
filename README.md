@@ -45,7 +45,6 @@ BluTracker works best with devices that consistently report signal strength (RSS
 *Works well:*
 - Bluetooth headphones (AirPods, Sony, JBL, etc.)
 - Wireless speakers
-- Most smartwatches (Wear OS, etc.)
 
 *Limited support:*
 - Smart watches (BLE devices)
