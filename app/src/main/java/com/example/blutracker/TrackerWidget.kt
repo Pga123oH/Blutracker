@@ -8,7 +8,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.widget.RemoteViews
-import com.example.blutracker.R // THIS IS THE MAGIC LINE!
+import com.example.blutracker.R
 
 class TrackerWidget : AppWidgetProvider() {
 
