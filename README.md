@@ -7,7 +7,7 @@ A simple Android app that remembers where you left your Bluetooth devices.
 * **Notifications:** Sends a quick alert to your phone so you realize you left your device behind before you get too far.
 * **Offline:** Everything is saved locally on your phone using a Room database. There is no cloud sync and no accounts.
 * **Home Screen Widget:** widget so you can turn background tracking on and off.
-* * **Live Signal Tracker:** Uses Bluetooth RSSI (Signal Strength) to estimate how far away you are from a device. 
+*  **Live Signal Tracker:** Uses Bluetooth RSSI (Signal Strength) to estimate how far away you are from a device. 
 * **Haptic Beep Engine:** The closer you get, the faster the phone beeps and vibrates. It’s like a high-tech game of "Hot or Cold" for your headphones.
 
 ##  How It Works
