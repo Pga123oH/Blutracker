@@ -10,6 +10,14 @@ A simple Android app that remembers where you left your Bluetooth devices.
 *  **Live Signal Tracker:** Uses Bluetooth RSSI (Signal Strength) to estimate how far away you are from a device. 
 * **Haptic Beep Engine:** The closer you get, the faster the phone beeps and vibrates. It’s like a high-tech game of "Hot or Cold" for your headphones.
 
+##  Getting Started
+what you need to do to install Blutracker
+1. Make sure your os is android 7+.
+2. Give Blutracker persmission to always access gps/ location.
+3. Give access to notification and devices.
+4. Add the widget onto your homescreen for ease of use.
+
+   
 ##  How It Works
 1. Give the app the required location and notification permissions.
 2. Connect your Bluetooth headphones or speaker normally.
@@ -83,3 +91,6 @@ A: Yes, anything that properly signals disconnection (headphones, speakers,
 
 *Q: Can I track other people's devices?*
 A: No, only devices paired with your phone. The app has no network capability.
+
+*Q: Why my apps doesn't notify me?*
+A: Make sure you give Blutracker permission to always acces your location and semd you a notification.
