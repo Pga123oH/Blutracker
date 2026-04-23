@@ -29,6 +29,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.blutracker.rssi.RssiTrackerScreen
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import androidx.compose.runtime.rememberCoroutineScope
 
 object Routes {
     const val DEVICES = "devices"
@@ -162,5 +165,14 @@ fun DevicesTab() {
     val context = LocalContext.current
     val db = AppDatabase.getDatabase(context)
     val logList by db.bluetoothLogDao().getAllLogs().collectAsState(initial = emptyList())
-    LogDashboard(logs = logList)
+    val coroutineScope = rememberCoroutineScope()
+
+    LogDashboard(
+        logs = logList,
+        onDeleteDevice = { deviceName ->
+            coroutineScope.launch(Dispatchers.IO) {
+                db.bluetoothLogDao().deleteDevice(deviceName)
+            }
+        }
+    )
 }

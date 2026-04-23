@@ -14,4 +14,7 @@ interface BluetoothLogDao {
 
     @Query("SELECT * FROM bluetooth_logs ORDER BY timestamp DESC")
     fun getAllLogs(): Flow<List<BluetoothLog>>
+
+    @Query("DELETE FROM bluetooth_logs WHERE deviceName = :deviceName")
+    suspend fun deleteDevice(deviceName: String)
 }
