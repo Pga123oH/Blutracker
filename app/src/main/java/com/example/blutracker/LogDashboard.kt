@@ -24,7 +24,7 @@ fun LogDashboard(
     logs: List<BluetoothLog>,
     onDeleteDevice: (String) -> Unit
 ) {
-    // Group logs by device and only show the most recent one
+
     val latestLogs = remember(logs) {
         logs.groupBy { it.deviceName }.map { it.value.first() }
     }
@@ -63,10 +63,10 @@ fun DeviceCard(
     val dateFormat = remember { SimpleDateFormat("MMM dd, yyyy - hh:mm a", Locale.getDefault()) }
     val dateString = dateFormat.format(Date(log.timestamp))
 
-    // This controls whether the safety pop-up is currently visible for THIS specific card
+
     var showDeleteDialog by remember { mutableStateOf(false) }
 
-    // The Confirmation Pop-up
+
     if (showDeleteDialog) {
         AlertDialog(
             onDismissRequest = { showDeleteDialog = false },
@@ -98,7 +98,7 @@ fun DeviceCard(
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
 
-            // Top Row: Title and Trash Can
+
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -138,7 +138,7 @@ fun DeviceCard(
             if (log.latitude != null && log.longitude != null) {
                 Button(
                     onClick = {
-                        // Fixed the URL formatting here so it opens correctly
+
                         val mapsUrl = "http://maps.google.com/?q=${log.latitude},${log.longitude}"
                         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(mapsUrl))
                         context.startActivity(intent)

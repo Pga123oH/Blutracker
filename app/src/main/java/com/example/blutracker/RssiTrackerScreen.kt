@@ -311,10 +311,10 @@ private fun distanceLabel(rssi: Int): String {
 private fun beepHint(rssi: Int): String {
     val d = rssiToDistance(rssi)
     return when {
-        d < 1.5  -> "🔊 Rapid beeps — very close!"
-        d < 4.0  -> "🔔 Fast beeps — getting warmer"
-        d < 8.0  -> "🔔 Steady beeps — medium range"
-        else     -> "🔕 Slow beeps — device is far"
+        d < 1.5  -> " very close!"
+        d < 4.0  -> "getting warmer"
+        d < 8.0  -> " medium range"
+        else     -> " device is far"
     }
 }
 

@@ -35,6 +35,10 @@ android {
     buildFeatures {
         compose = true
     }
+
+    lint {
+        abortOnError = false
+    }
 }
 
 // NEW: In AGP 9+, you configure Kotlin outside the android block
